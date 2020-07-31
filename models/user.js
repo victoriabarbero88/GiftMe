@@ -7,7 +7,7 @@ const userSchema = new Schema({
   password: String,
   description: String,
   image: { type: String ,default: ""},
-  myitems: [{type: mongoose.Types.ObjectId, ref:"Item"}],
+  myItems: [{type: mongoose.Types.ObjectId, ref:"Item"}],
   acquireditems: [{type: mongoose.Types.ObjectId, ref:"Item"}],
   favourites:[{type: mongoose.Types.ObjectId, ref:"Item"}],
 });

@@ -2,14 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
-  name: String,
+  name:  {type: String ,default: ""},
   userId: {type: mongoose.Types.ObjectId, ref:"User"},
-  description: String,
+  description: {type: String ,default: ""},
   image: { type: String ,default: ""},
   category: {type: String, enum:["books", "clothes", "devices"]},
   city: {type: String, enum:["Barcelona", "Madrid"]},
   requests: [{
-
       requester: {type: mongoose.Types.ObjectId, ref:"User"}, 
       delivery: {type: String, enum:["pickup", "send"]},
 
@@ -18,6 +17,6 @@ const itemSchema = new Schema({
 
 
 
-const Item = mongoose.model('item', itemSchema);
+const Item = mongoose.model('Item', itemSchema);
 
 module.exports = Item;
