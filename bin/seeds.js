@@ -19,7 +19,7 @@ const items = [
   {
     name: "trousers",
     userId: "",
-    description: "",
+    description: "100% cotton fabric",
     image: "https://agnesb-agnesb-com-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/0a82767dab00426169ea376c94411d75219196fd_Y213US05_000_1.jpeg",
     category: "clothes",
     city: "Madrid",
@@ -28,7 +28,7 @@ const items = [
   {
     name: "alarm clock",
     userId: "",
-    description: "",
+    description: "Loud alarm clock for people who are heavy sleepers, mild loss hearing even deaf.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRu1ZjT-WEyjzB433VrNpxdOHbxFHw5zQXMy7LfnbUd6atdPfE9Omov_z5OwQRJQm8Dey2W6ec&usqp=CAc",
     category: "devices",
     city: "Barcelona",
