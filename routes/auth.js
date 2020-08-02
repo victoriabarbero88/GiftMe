@@ -79,6 +79,46 @@ router.post("/login", (req,res,next)=>{
 
 });
 
+//LOGOUT
+
+//COPIADO DESDE EL EJEMPLO DE LAUNDRY PORQUE NO FUNCIONA CUANDO LO REFACTORIZAMOS
+//ERROR EN UN .THEN (VER MÁS ABAJO)
+router.get('/logout', (req,res,next)=> {
+    if (!req.session.currentUser){
+    res.redirect('/');
+    return
+    }
+
+    req.session.destroy((err) =>{
+        if(err){
+            next(err);
+            return;
+        }
+        res.redirect('/');
+    })
+  });
+
+
+
+//  VER ERROR EN EL .THEN
+
+// router.get("/logout", (req,res,next)=> {
+//     if(!req.session.currentUser){
+//         res.redirect("/");
+//         return;
+//         }
+//     req.session.destroy((error)=> {
+//     .then(() => {
+//         res.redirect('/');
+//     })
+//     .catch ((error)=>{
+//         next(error);
+//     })
+
+//     });
+
+// });
+
 
 
 module.exports = router;
