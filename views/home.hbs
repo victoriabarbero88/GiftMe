@@ -1,9 +1,28 @@
+<h2>HOME VIEW</h2>
 
-
-<img src="" alt="LOGO"> 
+<img class="logo" src="../images/Logo.png" alt="LOGO"> 
 <p>Gift me!</p>
 
-{{#if}}
+
+
+{{#if isUserLoggedIn  }}
+  <p> Hello, {{ currentUserInfo.name }}. </p>
+{{/if}}
+<nav>
+  <ul>
+    {{#if isUserLoggedIn  }}
+     <li> <a href="/profile"> Profile </a> </li>
+      <li> <a href="/myitems"> My Items</a> </li>
+      <li> <a href="/logout"> Log Out </a> </li>
+    {{else}}
+      <li> <a href="/signup"> Sign Up </a> </li>
+      <li> <a href="/login"> Log In </a> </li>
+    {{/if}}
+  </ul>
+</nav>
+
+
+
 
 <div>
 
@@ -12,20 +31,7 @@
 
 </div>
 
-<div>
-<a href="">Profile</a>
-<a href="">My Items</a>
-<a href="">Favorites</a>
-
-</div>
-
-{{else}}
-
-<a href="">Login</a> 
-<a href="">Signup</a> 
 
 
 
 
-
-{{/if}}

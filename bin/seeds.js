@@ -26,6 +26,24 @@ const items = [
     requests: [],
   },
   {
+    name: "Mouse",
+    userId: "Logitech wireless mouse",
+    description: "Little use",
+    image: "../public/images/mouse.jpeg",
+    category: "devices",
+    city: "Madrid",
+    requests: [],
+  },
+  {
+    name: "To kill a mockingbird",
+    userId: "",
+    description: "Novel by Harper Lee",
+    image: "../public/images/mockingbird-book.jpeg",
+    category: "books",
+    city: "Barcelona",
+    requests: [],
+  },
+  {
     name: "alarm clock",
     userId: "",
     description: "Loud alarm clock for people who are heavy sleepers, mild loss hearing even deaf.",
@@ -34,7 +52,17 @@ const items = [
     city: "Barcelona",
     requests: [],
 
-  }]
+  },
+  {
+    name: "t-shirt",
+    userId: "",
+    description: "100% cotton fabric",
+    image: "../public/images/tshirt.jpeg",
+    category: "clothes",
+    city: "Madrid",
+    requests: [],
+  },
+]
   
 
 
@@ -66,7 +94,8 @@ const users = [
     myItems: [],
     acquireditems: [],
     favourites:[],
-}];
+}
+];
 
 mongoose.connect(`mongodb://localhost/${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{

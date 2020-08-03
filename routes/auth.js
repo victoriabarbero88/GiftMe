@@ -1,10 +1,10 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
-
+const saltRounds = 10;
 const User = require ('../models/user'); 
 
 const router = express.Router();
-const bcryptSalt = 10;
+
 
 //SIGNUP
 
@@ -33,7 +33,7 @@ User.findOne({email})
 
     const salt = bcrypt.genSaltSync(saltRounds);
     const hashedPassword = bcrypt.hashSync(password, salt);
-    const newUser = {name, email, password: hashedPassword};
+    //const newUser = {name, email, password: hashedPassword};
 
     User.create({name, email, password: hashedPassword})
         .then(()=>{
@@ -55,23 +55,26 @@ router.get("/login", (req,res,next) => {
 });
 
 router.post("/login", (req,res,next)=>{
-    const {name, email, password} = req.body;
-    if(name === "" || email === "" || password === ""){
-        res.render("auth/login", {errorMessage:"Please enter name, email and password to login"});
+    const {email, password} = req.body;
+    if(email === "" || password === ""){
+        res.render("auth/login", {errorMessage:"Please enter email and password to login"});
         return;
     }
-    User.findOne({email})
+    User.findOne({email: email})
     .then((user)=> {
-        if(!user){
+        if(user === null){
             res.render("auth/login", {errorMessage: "The email doesn´t exist"});
             return;
         }
-        if (bcrypt.compareSync(password, user.password)){
+        if (!bcrypt.compareSync(password, user.password)){
+            res.render('auth/login', {
+                errorMessage: 'Invalid password.'
+              });
+              return;
+            }
+           
             req.session.currentUser = user;
-            res.redirect("/") // editar luego para que redirija a la vista de HOME
-        } else {
-            res.render("auth/login", {errorMessage: "Incorrect password"});
-        }
+            res.redirect('/');
     })
     .catch(()=>{
         res.render("auth/login", {errorMessage: "Error while login. Try again later"})

@@ -50,7 +50,7 @@ app.use(session({
   secret: 'never do your own laundry again', //EDITAR Y REVISAR SEGÚN DONDE APARECE ESTE MENSAJE.
   resave: true,
   saveUninitialized: true,
-  cookie: { maxAge: 60000 },
+  cookie: { maxAge: 120000 },
   store: new MongoStore({
     mongooseConnection: mongoose.connection,
     ttl: 24 * 60 * 60 // 1 day
