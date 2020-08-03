@@ -68,27 +68,43 @@ router.get('/profile', (req, res, next) => {
 
 
 
-// router.get('/myitems', (req, res, next) => {
-//     console.log("hola")
-//     Item.find()
-   
-//     .then((items)=>{
-//       res.render('giftme/myitems', {items});
+router.get('/myitems', (req, res, next) => {
+  const user = req.session.currentUser;
+  User.findById(user._id)
+  .populate('myItems')
+  .then((item) => {
+    console.log(item);
+    res.render('giftme/myitems', {item})
     
-//     })
-//     .catch((error)=>{
-//       console.log(error);
-//     })
-//   });
+  })  
+  .catch((error) => {
+    console.log(error);
+  })
+ 
+
+});
+   
+  //   // Item.find()
+   
+  //   // .then((items)=>{
+  //     res.render('giftme/myitems', {items});
+    
+  //   })
+  // //   .catch((error)=>{
+  // //     console.log(error);
+  // //   })
+  // // });
 
 
   router.post('/item/create', (req, res, next) => {
     const { name,image, description, category, city} = req.body;
-    const user= req.session.currentUser.id;
+    const user= req.session.currentUser._id;
     const newItem = new Item({ name,image, description, category, city})
     newItem.save()
     .then((item) => {
-      User.update({_id:user}, {$push: {myItems: newItem._id}})
+      console.log(item)
+      console.log("holi", user)
+      User.update({_id:user}, {$push: {myItems: item._id}})
       .then(()=>{
         res.redirect('/myitems');
       })
