@@ -1,12 +1,70 @@
+<h2>My Items</h2>
 
+
+
+
+
+<form action="/profile/update" method="post">
+
+    <img src="{{user.image}}" alt="">
+
+
+     <label  for="">Image:</label>
+    <input type="file" name="image" value="{{user.image}}"/>   
+
+
+    <label for="">Name:</label>
+    <input type="text" name="name" value="{{user.name}}"/>
+
+
+
+    <label for="">Description:</label>
+    <textarea type="text" name="description">{{user.description}}</textarea>
+
+
+    <button type="submit">Update profile</button>
+</form>
+
+
+
+<form action="/myitems/create" method="post">
+    <label for="">Name:</label>
+    <input type="text" name="name">
+
+    <label for="">Description:</label>
+    <input type="text" name="description">
+
+    <label for="">Image:</label>
+    <input type="text" name="image">
+
+    <label for="">Category:</label>
+    <input type="text" name="category">
+
+
+    <label for="">City:</label>
+    <input type="text" name="city">
+
+
+    <button type="submit">Add Item</button>
+</form>
+
+
+<div>
 <a href=""><img src="" atl= "imagen boton atrás" </a>
+
 
 <img src="" alt="LOGO"> 
 <p>Gift me!</p>
 
 <a href=""><img src="" atl= "imagen boton perfil + logout" </a>
 
-<h2>My Items</h2>
+
+</div>
+
+
+
+
+
 
 <div>
 
@@ -15,3 +73,7 @@
     
 
 </div>
+
+
+
+

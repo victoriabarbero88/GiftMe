@@ -30,6 +30,7 @@ mongoose
 
 const indexRouter = require('./routes/index');
 const authRouter = require ('./routes/auth');
+const giftRouter = require('./routes/gift'); 
 
 const app = express();
 
@@ -71,6 +72,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
 app.use('/', authRouter);
+app.use('/', giftRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

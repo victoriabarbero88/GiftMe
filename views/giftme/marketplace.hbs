@@ -1,16 +1,27 @@
 
-<a href=""><img src="" atl= "imagen boton atrás" </a>
-
-<img src="" alt="LOGO"> 
-<p>Gift me!</p>
-
-<a href=""><img src="" atl= "imagen boton perfil + logout" </a>
 
 <h2>Marketplace</h2>
 
 <div>
 
-    <a href=""><img src="" alt="imagenes traidas de items"</a> 
+<h1>Items</h1>
+
+{{#each items}}
+
+<a href="/details/{{_id}}">
+<img src="{{image}}" alt="">
+
+</a>
+
+<p>{{name}}</p>
+
+
+
+
+{{/each}}
     
 
 </div>
+
+
+

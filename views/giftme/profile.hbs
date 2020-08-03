@@ -1,15 +1,24 @@
 
-<a href=""><img src="" atl= "imagen boton atrás" </a>
-
-<img src="" alt="profile image"> 
-
-
-<a href=""><img src="" atl= "imagen boton perfil + logout" </a>
 
 
 
-<div>
+<form action="/profile/update" method="post">
 
-<form action="CRUD"></form>
+    <img src="{{user.image}}" alt="">
 
-</div>
+
+     <label  for="">Image:</label>
+    <input type="file" name="image" value="{{user.image}}"/>   
+
+
+    <label for="">Name:</label>
+    <input type="text" name="name" value="{{user.name}}"/>
+
+
+
+    <label for="">Description:</label>
+    <textarea type="text" name="description">{{user.description}}</textarea>
+
+
+    <button type="submit">Update profile</button>
+</form>
