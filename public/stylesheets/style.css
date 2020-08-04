@@ -87,3 +87,58 @@ border-style: none;
 body {
   padding: 20px;
 }
+
+/*OTHER USER*/
+
+.h2-style{
+  text-align: center;
+  padding: 100px 0;
+  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.name-style{
+  font: 65px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px
+}
+
+.description-style{
+  font: 45px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+.img-user{
+  display:block;
+  margin:auto;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height:700px;
+  
+ 
+}
+
+
+/*REQUEST*/
+
+
+.h2-style{
+  text-align: center;
+  padding: 100px 0;
+  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+
+.img-request{
+  display:block;
+  margin:auto;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height:350px;
+  padding-top: 100px;
+  
+ 
+}
