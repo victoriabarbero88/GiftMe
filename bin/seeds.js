@@ -53,10 +53,10 @@ const items = [
     requests: []
   },
   {
-    name: "t-shirt",
+    name: "Blouse",
     userId: "",
-    description: "100% cotton fabric",
-    image: "../public/images/tshirt.jpeg",
+    description: "M size. Fresh fabric",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_KD2rJmfLQi1fY_U3-1QMk2sFWsS5PWo3vw&usqp=CAU",
     category: "clothes",
     city: "Madrid",
     requests: []
