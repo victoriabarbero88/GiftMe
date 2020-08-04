@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Item = require('../models/item');
 const User = require('../models/user'); 
+const parser = require('./../config/cloudinary');
 
 
 
@@ -59,12 +60,34 @@ router.get('/other-user', (req, res, next) => {
 
 
 router.get('/profile', (req, res, next) => {
-  const user = req.session.currentUser;
-  console.log(user);
-  res.render('giftme/profile', {user});
+  //const user = req.session.currentUser;
+  
+  const _id = req.session.currentUser._id;
+  User.findOne({_id})
+  .then((user)=>{
+    res.render('giftme/profile', {user});
+    
+  })
+  .catch((error)=>{
+    
+  })
+
   });
   
 
+router.post('/profile/update', parser.single("image"), (req, res, next) => {
+    console.log(req.file)
+    const _id = req.session.currentUser._id;
+    const {name, description} = req.body;
+    const image_url = req.file.secure_url;
+    User.findByIdAndUpdate(_id, {image: image_url, name, description})
+    .then(()=>{
+      res.redirect("/profile")
+    })
+
+    .catch((error)=>{})
+    });
+    
 
 
 
