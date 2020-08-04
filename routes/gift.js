@@ -17,9 +17,7 @@ router.use((req,res,next)=>{
 
 
 router.get('/marketplace', (req, res, next) => {
-
   Item.find()
- 
   .then((items)=>{
     res.render('giftme/marketplace', {items});
   
@@ -35,6 +33,7 @@ router.get('/details/:id', (req, res, next) => {
 
   Item.findOne({'_id': req.params.id})
     .then(item => {
+      console.log(item);
       res.render('giftme/item-details', {item});
     })
     .catch(error => {
@@ -51,11 +50,18 @@ router.get('/request', (req, res, next) => {
 
 
 
-
-router.get('/other-user', (req, res, next) => {
-    res.render('giftme/other-user');
-  });
-  
+router.get('/other-user/:id', (req, res, next) => {
+  const userId = req.params.id;
+  User.findById(userId)
+    .populate("myItems")
+    .then((user) => {
+      //console.log(user)
+      res.render('giftme/other-user', {user});
+    })
+    .catch(error => {
+      console.log( error);
+    })
+});
 
 
 
@@ -76,7 +82,7 @@ router.get('/profile', (req, res, next) => {
   
 
 router.post('/profile/update', parser.single("image"), (req, res, next) => {
-    console.log(req.file)
+    //console.log(req.file)
     const _id = req.session.currentUser._id;
     const {name, description} = req.body;
     const image_url = req.file.secure_url;
@@ -104,8 +110,24 @@ router.get('/myitems', (req, res, next) => {
     console.log(error);
   })
  
-
 });
+
+
+router.post("/myitems/:id/delete", (req, res, next) => {
+  const userId = req.session.currentUser._id;
+  Item.findByIdAndRemove(req.params.id )
+    .then((item) => {
+  User.findByIdAndUpdate(userId, {myItems: {$pull: req.params.id}})
+      res.redirect('/myitems');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+    
+});
+
+
+
 // router.get('/myitmes', (req, res, next) => {
 //   const _id = req.session.currentUser._id;
 
@@ -164,6 +186,13 @@ router.get('/myitems', (req, res, next) => {
 
     .catch((error)=>{})
     });
+
+
+
+
+
+    
+
 
 
 

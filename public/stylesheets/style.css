@@ -6,24 +6,24 @@ body {
 a {
   color: #00B7FF;
 }
-
-
-.logo{
-
-  height: 70px;
-
+/* LAYOUT VIEW */
+.upnav img {
+  height: 50px;
 }
 
+.downnav img {
+height: 50px;
+}
+
+.logo{
+  height: 70px;
+}
 
 /*PROFILE VIEW*/
-
 .profile-pic{
-
   height: 300px;
-
 }
 
 .input {
 border-style: none;
- 
 }
