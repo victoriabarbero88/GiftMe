@@ -4,8 +4,8 @@
     <form  action="/profile/update" method="post" enctype="multipart/form-data">
         <img class="profile-pic" src="{{user.image}}" alt="">
         <br>
-        <label  for="">Image:</label>
-        <input type="file" name="image" value="{{user.image}}"/>
+        <label  for="label"></label>
+        <input type="file" name="image" value="{{user.image}}" class="custom-file-input"/>
         <br>   
         <br>
         <label  for="">Name:</label>

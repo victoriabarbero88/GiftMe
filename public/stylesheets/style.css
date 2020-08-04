@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,9 +11,14 @@ a {
   color: #00B7FF;
 }
 /* LAYOUT VIEW */
-.upnav img {
-  height: 50px;
+.logo {
+height: 200px;
+width: 100px;
 }
+.title {
+  height: 50px;
+  width: 200px;
+  }
 
 .downnav img {
 height: 50px;
@@ -19,6 +28,20 @@ height: 50px;
   height: 70px;
 }
 
+/* MARKETPLACE VIEW */
+
+.imgMarket{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: stretch;
+
+}
+
+
+
 /*PROFILE VIEW*/
 .profile-pic{
   height: 300px;
@@ -26,4 +49,41 @@ height: 50px;
 
 .input {
 border-style: none;
+}
+
+/*PROFILE*/
+.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select a photo';
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+body {
+  padding: 20px;
 }
