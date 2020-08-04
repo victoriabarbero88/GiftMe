@@ -2,23 +2,24 @@
 
 
 
-<form action="/profile/update" method="post">
+<form  action="/profile/update" method="post">
 
-    <img src="{{user.image}}" alt="">
+    <img class="profile-pic" src="{{user.image}}" alt="">
 
-
+<br>
      <label  for="">Image:</label>
-    <input type="file" name="image" value="{{user.image}}"/>   
+    <input type="file" name="image" value="{{user.image}}"/>
+<br>   
+<br>
 
+    <label  for="">Name:</label>
+    <input class="input" type="text" name="name" value="{{user.name}}"/>
 
-    <label for="">Name:</label>
-    <input type="text" name="name" value="{{user.name}}"/>
-
-
+<br>
 
     <label for="">Description:</label>
-    <textarea type="text" name="description">{{user.description}}</textarea>
-
-
+    <textarea class="input" type="text" name="description">{{user.description}}</textarea>
+<br>
+<br>
     <button type="submit">Update profile</button>
 </form>
