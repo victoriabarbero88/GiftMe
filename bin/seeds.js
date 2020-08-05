@@ -89,12 +89,12 @@ const users = [
     favourites: []
   },
   {
-    name: "Alejandro",
+    name: "Alex",
     email: "alejo@gmail.com",
     password: "12346",
     description: "I love Web Development",
     image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+    "https://images.unsplash.com/photo-1552493450-2b5ce80ed13f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1302&q=80",
     myItems: [],
     acquireditems: [],
     favourites: []

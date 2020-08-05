@@ -7,20 +7,38 @@
     <h2 class="h2-style">Make a request to the owner!</h2> 
     <form action="/profile/update" method="post">
 
-     
-        <label for="">Delivery option:</label>
-        <input type="text" name="delivery option">
-        <br>
-        <br>
+   
 
+ <form >
+<div class="form-style">
+
+	<div class="form-group"> 
+		<label class="control-label">Delivery option:</label>
+    
+		<div class="radio">
+		  <label>
+			<input type="radio" name="delivery" value="Pick up">
+			Pick up
+		  </label>
+		</div>
+		<div class="radio">
+		  <label>
+			<input type="radio"  name="delivery" value="Send ">
+			Send it to me
+		  </label>
+		</div>
+<br>
         <label for="">Message</label>
         <input type="text" name="Message">
         <br>
-        <br>
+        <br> 
 
-    </form>
+	</div>		
+
+</form>
 </div>
 
+</div>
 
 <!-- PARTE CÓDIGO MODAL BOTÓN REQUEST -->
 <style>
@@ -73,7 +91,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <body>
 
 
-
+<div class="form-style">
 <!-- Trigger/Open The Modal -->
 <button id="myBtn">Request item</button>
 
@@ -90,6 +108,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   </div>
 
 </div>
+</div>
+
 
 <script>
 // Get the modal

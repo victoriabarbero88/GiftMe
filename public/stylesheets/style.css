@@ -113,8 +113,32 @@ body {
   margin:auto;
   justify-content: center;
   align-items: center;
-  width: 700px;
+  width: 900px;
   height:700px;
+  
+ 
+}
+
+
+/*ITEM DETAILS*/
+
+
+.h2-style{
+  text-align: center;
+  padding: 100px 0;
+  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+
+.img-item{
+  display:block;
+  margin:auto;
+ 
+  align-items: center;
+  width: 600px;
+  height:400px;
+  padding-top: 100px;
   
  
 }
@@ -141,4 +165,13 @@ body {
   padding-top: 100px;
   
  
+}
+
+.form-style{
+  text-align: center;
+  align-content: flex-start;
+  font: 40px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+
+
 }
