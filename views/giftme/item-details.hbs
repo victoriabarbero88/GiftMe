@@ -3,17 +3,21 @@
 
 <h2 class="h2-style">Item Details</h2>
 
+<div class="item-style">
 
-<div class="img-item">
 <p >{{item.name}}</p>
+<br>
 
+<img class="img-item-style" src={{item.image}} alt="">
+<br>
+<br>
+ <p>{{item.description}}</p>
 
-<img  src={{item.image}} alt="">
 </div>
 
-<br>
-<br>
+<div class="links">
 <a href="/request" button type="submit"> Request Item</button></a>
 <br>
+<br>
 <a href="/other-user/{{item.userId}}" button type="submit"> See User info</button></a>
-    
+</div>
