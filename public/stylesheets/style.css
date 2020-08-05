@@ -22,6 +22,7 @@ header img {
   height: 200px;
   display: flex;
   align-items: center;
+ 
 }
 
 header {
@@ -69,6 +70,24 @@ footer img {
   margin-bottom: 30px;
 } */
 
+/*HOME*/
+.greet {
+  font-size: 1.75rem;
+  margin: 20px;
+  text-align: center;
+}
+
+.navHome {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.navHome a {
+  text-decoration: none;
+  color: black;
+  
+}
 /* MYITEMS*/
 .h2myitems {
   font-size: 2.4rem;
@@ -88,6 +107,11 @@ footer img {
 }
 .divitem p {
   font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px; 
+}
+.descript {
+  font-size: 1rem;
   margin-top: 40px;
   margin-bottom: 20px; 
 }
@@ -286,100 +310,88 @@ margin-bottom: 20px;
 /*OTHER USER*/
 
 .h2-style{
+  font-size: 2.4rem;
   text-align: center;
-  /* padding: 100px 0; */
-  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 20px;  
 }
 
 .name-style{
-  font: 65px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: center;
-  padding-top: 100px
+  text-align: center;  
+  margin: 10px;
 }
 
 .description-style{
-  font: 45px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 10px;
   text-align: center;
 }
 
-.img-user{
-  display:block;
-  margin:auto;
-  justify-content: center;
-  align-items: center;
-  width: 900px;
-  height:700px;
-  
- 
+.img-user-other {
+  /* height: 200px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 
 /*ITEM DETAILS*/
 
 
-.h2-style{
-  
+/* .h2-style{
+  font-size: 2.4rem;
   text-align: center;
-  padding: 100px 0;
-  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-weight: bold;
-}
+
+  
+} */
 
 .img-item-style{
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; 
   width: 50%;
+  height: 50%;
+  
 }
 
 .item-style{
   display:block;
   margin:auto;
   align-items: center;
-  width: 700px;
-  height:700px;
-  padding-top: 100px;
-  font: 45px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  
   text-align: center;
 }
  
 
 
 .links{
-margin-top: 200px;
-  font-size: 40px;
+margin-top: 20px;
+font-size: 15px;
   
 }
 
 
 /*REQUEST*/
 
-
-.h2-style{
-  text-align: center;
-  padding: 100px 0;
-  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-weight: bold;
-}
+font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px; 
 
 
 .img-request{
   display:block;
-  margin:auto;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  height:350px;
-  padding-top: 100px;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 100%;
+  height:100%;
   
- 
 }
 
 .form-style{
   text-align: center;
   align-content: flex-start;
-  font: 40px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
 @media (min-width: 768px) { 

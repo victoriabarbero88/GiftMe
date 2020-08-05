@@ -1,21 +1,19 @@
 
 {{#if isUserLoggedIn  }}
-  <p> Hello, {{ currentUserInfo.name }}. </p>
+  <p class="greet"> Hello, {{ currentUserInfo.name }} ! </p>
 {{/if}}
-<nav>
-  <ul>
-    {{#if isUserLoggedIn  }}
-     <li> <a href="/profile"> Profile </a> </li>
-      <li> <a href="/myitems"> My Items</a> </li>
-          
-     <li> <a href="/marketplace"> Marketplace</a> </li>
+<nav class="navHome">
   
-      <li> <a href="/logout"> Log Out </a> </li>
+    {{#if isUserLoggedIn  }}
+      <button ><a href="/profile"> Profile </a></button> 
+      <button><a href="/myitems"> My Items</a> </button>   
+      <button><a href="/marketplace"> Marketplace</a> </button>
+      <button><a href="/logout"> Log Out </a> </button>
     {{else}}
-      <li> <a href="/signup"> Sign Up </a> </li>
-      <li> <a href="/login"> Log In </a> </li>
+      <button><a href="/signup"> Sign Up </a></button> 
+      <button><a href="/login"> Log In </a> </button>
     {{/if}}
-  </ul>
+  
 </nav>
 
 

@@ -1,43 +1,25 @@
 <!-- REQUEST VIEW -->
 
 
-
 <img class="img-request" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/socialmedia/apple/237/envelope_2709.png" alt="">
 <div>
-    <h2 class="h2-style">Make a request to the owner!</h2> 
-    <form action="/profile/update" method="post">
-
-   
-
- <form >
-<div class="form-style">
-
-	<div class="form-group"> 
-		<label class="control-label">Delivery option:</label>
-    
-		<div class="radio">
-		  <label>
-			<input type="radio" name="delivery" value="Pick up">
-			Pick up
-		  </label>
-		</div>
-		<div class="radio">
-		  <label>
-			<input type="radio"  name="delivery" value="Send ">
-			Send it to me
-		  </label>
-		</div>
-<br>
+    <p>Make a request to the owner!</p> 
+    {{!-- <form action="/profile/update" method="post"> --}}
+  <form >
+    <div class="form-style">
+      <div class="form-group"> 
+		    <label class="control-label">Delivery option:</label>
+		    <div class="radio">
+		      <label><input type="radio" name="delivery" value="Pick up">Pick up</label>
+		    </div>
+		    <div class="radio">
+		      <label><input type="radio"  name="delivery" value="Send ">Send it to me</label>
+		    </div>
         <label for="">Message</label>
         <input type="text" name="Message">
-        <br>
-        <br> 
-
-	</div>		
-
-</form>
-</div>
-
+	    </div>		
+    </div>
+  </form>
 </div>
 
 <!-- PARTE CÓDIGO MODAL BOTÓN REQUEST -->

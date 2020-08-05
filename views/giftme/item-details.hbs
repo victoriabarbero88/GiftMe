@@ -5,19 +5,14 @@
 
 <div class="item-style">
 
-<p >{{item.name}}</p>
-<br>
+    <div class="links">
+        <a href="/request" button type="submit"> Request Item</button></a>
+        <a href="/other-user/{{item.userId}}" button type="submit"> See User info</button></a>
+    </div>
 
-<img class="img-item-style" src={{item.image}} alt="">
-<br>
-<br>
- <p>{{item.description}}</p>
-
+    <img class="img-item-style" src={{item.image}} alt="">
+    <p >{{item.name}}</p>
+    <p>{{item.description}}</p>
+    
 </div>
 
-<div class="links">
-<a href="/request" button type="submit"> Request Item</button></a>
-<br>
-<br>
-<a href="/other-user/{{item.userId}}" button type="submit"> See User info</button></a>
-</div>
