@@ -6,7 +6,7 @@
             <p>{{name}}</p>
             <img src="{{image}}"  alt=""> 
             <form action="/myitems/{{_id}}/delete" method="post">
-                <button type="submit">Delete</button>
+                <button class="button" type="submit">Delete</button>
             </form>
         </div>
     {{/each}}
@@ -16,7 +16,7 @@
 
 <form action="/item/create" method="post" enctype="multipart/form-data">
     <label  for="" >Image:</label>
-    <input type="file" name="image" />   
+    <input type="file" name="image" class="custom-file-input-mi" />   
     <br>
     <label for=""> Name: </label>
     <input type="text" name="name"/>
@@ -24,7 +24,7 @@
     <label for="">Description:</label>
     <textarea type="text" name="description"></textarea> 
     <br>
-    <button type="submit">Add item</button>
+    <button class="button" type="submit">Add item</button>
 </form>
 
 
