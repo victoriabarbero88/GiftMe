@@ -1,23 +1,21 @@
-<h2>My Items</h2>
+<h2 class="h2myitems">My Items</h2>
 
-{{#each item.myItems}}
-    <br>
-    {{name}}
-    <br>
-    <img src="{{image}}" alt=""> 
-
-<form action="/myitems/{{_id}}/delete" method="post">
-   <button type="submit">Delete</button>
-
-</form>
-   
-{{/each}}
-
+<div class="divitem">
+    {{#each item.myItems}}
+        <div class="itemForm">
+            <p>{{name}}</p>
+            <img src="{{image}}"  alt=""> 
+            <form action="/myitems/{{_id}}/delete" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    {{/each}}
+</div>
 
 <!-- CREATE FORM -->
 
 <form action="/item/create" method="post" enctype="multipart/form-data">
-    <label  for="">Image:</label>
+    <label  for="" >Image:</label>
     <input type="file" name="image" />   
     <br>
     <label for=""> Name: </label>

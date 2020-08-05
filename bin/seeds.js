@@ -22,7 +22,7 @@ const items = [
     name: "trousers",
     userId: "",
     description: "100% cotton fabric",
-    image:"",
+    image:"https://i.pinimg.com/564x/31/30/0c/31300ccc972ec7c2d4ad08bc190343f2.jpg",
     category: "clothes",
     city: "Madrid",
     requests: []
@@ -40,7 +40,7 @@ const items = [
     name: "To kill a mockingbird",
     userId: "",
     description: "Novel by Harper Lee",
-    image: "",
+    image: "https://cdn.britannica.com/21/182021-050-666DB6B1/book-cover-To-Kill-a-Mockingbird-many-1961.jpg",
     category: "books",
     city: "Barcelona",
     requests: []

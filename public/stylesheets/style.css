@@ -1,32 +1,40 @@
 * {
   margin: 0 auto;
 }
+/* GENERAL */
+
 html {
   background-color: #ffffff;
-  background-image: url("../images/backgrounds/dynamic-style.png");
+  background-image: url("../images/backgrounds/45degreee_fabric.png");
 }
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
-/*LAYOUT HEADER*/
+
+
+/* LAYOUT HEADER */
 header img {
-  height: 400px;
+  height: 200px;
   display: flex;
   justify-content: center;
 }
 
-/*LAYOUT NAVBAR*/
+header {
+  width: 100%
+}
+
+/* LAYOUT NAVBAR */
 footer {
   display: flex;
   justify-content: space-around;
 }
 footer img {
-  height: 100px;
+  height: 40px;
 }
 .navbar {
   overflow: hidden;
@@ -40,7 +48,7 @@ footer img {
   float: left;
   display: block;
   color: #f2f2f2;
-  text-align: center;
+  /* text-align: center; */
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -56,26 +64,63 @@ footer img {
   color: white;
 }
 
-/* MARKETPLACE VIEW */
+/* MYITEMS*/
+.h2myitems {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  
+}
+.divitem {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.507);
+}
+.divitem img {
+  height: 200px;
+  
+}
 
-.imgMarket{
+
+
+/* MARKETPLACE VIEW */
+.h2market {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  
+}
+.marketitems {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.507);
+}
+.marketitems img {
+  height: 200px;
+  
+}
+.marketitems p {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  
+}
+
+
+/* .imgMarket{
   
   display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	flex-direction: row;
+	flex-wrap: row wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: stretch;
 
-
-  /* display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: baseline;
-	align-content: stretch; */
-
-}
+} */
 
 
 
@@ -121,9 +166,9 @@ border-style: none;
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
 }
 
-body {
+/* body {
   padding: 20px;
-}
+} */
 
 /*OTHER USER*/
 
@@ -222,7 +267,16 @@ margin-top: 200px;
   text-align: center;
   align-content: flex-start;
   font: 40px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
 
+@media (min-width: 768px) { 
 
+}
 
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1200px) { 
+  
 }
