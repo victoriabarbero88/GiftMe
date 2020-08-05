@@ -13,20 +13,25 @@
 </div>
 
 <!-- CREATE FORM -->
-
-<form action="/item/create" method="post" enctype="multipart/form-data">
-    <label  for="" >Image:</label>
-    <input type="file" name="image" class="custom-file-input-mi" />   
-    <br>
-    <label for=""> Name: </label>
-    <input type="text" name="name"/>
-    <br>
-    <label for="">Description:</label>
-    <textarea type="text" name="description"></textarea> 
-    <br>
-    <button class="button" type="submit">Add item</button>
-</form>
-
+<div class="addForm">
+    <p>Add your items!</p>
+    
+    <form action="/item/create" method="post" enctype="multipart/form-data">
+    <div class="form-div">
+        {{!-- <label  for="" >Image:</label> --}}
+        <input type="file" name="image" class="custom-file-input-mi" />   
+        
+        {{!-- <label for=""> Name: </label> --}}
+        <input type="text" name="name" placeholder="Name"/>
+        
+        {{!-- <label for="">Description:</label> --}}
+        <textarea type="text" name="description" placeholder="Description"></textarea> 
+          </div> 
+        
+        <button class="button" type="submit">Add item</button>
+      
+    </form>
+</div>
 
 
 <!-- UPDATE FORM -->

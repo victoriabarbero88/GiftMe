@@ -1,21 +1,24 @@
 
 <section class="profile">
+    <div class="updateForm"> 
 
     <form  action="/profile/update" method="post" enctype="multipart/form-data">
-        <img class="profile-pic" src="{{user.image}}" alt="">
-        <br>
-        <label  for="label"></label>
-        <input type="file" name="image" value="{{user.image}}" class="custom-file-input"/>
-        <br>   
-        <br>
-        <label  for="">Name:</label>
-        <input class="input" type="text" name="name" value="{{user.name}}"/>
-        <br>
-        <label for="">Description:</label>
-        <textarea class="input" type="text" name="description">{{user.description}}</textarea>
-        <br>
-        <br>
-        <button type="submit">Update profile</button>
+        <div class="profile-form"></div>
+            <img class="profile-pic" src="{{user.image}}" alt="">
+            
+            {{!-- <label  for="label"></label> --}}
+            <input type="file" name="image" value="{{user.image}}" class="custom-file-input"/>
+            
+            {{!-- <label  for="">Name:</label> --}}
+            <input class="input" type="text" name="name"  value="{{user.name}}"/>
+            
+            {{!-- <label for="">Description:</label> --}}
+            <textarea class="input" type="text" name="description">{{user.description}}</textarea>
+        
+            <button type="submit" class="button">Update profile</button>
+        </div>
+        
+        <div>
     </form>
 
 </section>
