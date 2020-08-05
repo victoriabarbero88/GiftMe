@@ -1,7 +1,10 @@
 * {
-  margin: 0;
+  margin: 0 auto;
 }
-
+html {
+  background-color: #ffffff;
+  background-image: url("../images/backgrounds/dynamic-style.png");
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -10,22 +13,47 @@ body {
 a {
   color: #00B7FF;
 }
-/* LAYOUT VIEW */
-.logo {
-height: 200px;
-width: 100px;
-}
-.title {
-  height: 50px;
-  width: 200px;
-  }
-
-.downnav img {
-height: 50px;
+/*LAYOUT HEADER*/
+header img {
+  height: 400px;
+  display: flex;
+  justify-content: center;
 }
 
-.logo{
-  height: 70px;
+/*LAYOUT NAVBAR*/
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer img {
+  height: 100px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ffffff;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #ffffff;
+  color: white;
 }
 
 /* MARKETPLACE VIEW */
