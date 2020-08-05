@@ -1,4 +1,5 @@
 //vinculamos modelos y mongoose.
+require('dotenv').config();
 const mongoose = require("mongoose");
 const Item = require("../models/item");
 const User = require("../models/user");
@@ -101,7 +102,7 @@ const users = [
   }
 ];
 mongoose
-  .connect(`mongodb://localhost/${dbName}`, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -110,7 +111,7 @@ mongoose
 
     const updatedUsers = users.map((user)=> {
       const salt = bcrypt.genSaltSync(saltRounds);
-      const hashedPassword = bcrypt.hashSync(password, salt);
+      const hashedPassword = bcrypt.hashSync(DEFAULT_PASSWORD, salt);
       user.password = hashedPassword;
       return user;
     })
