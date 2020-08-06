@@ -150,7 +150,8 @@ router.post("/myitems/:id/delete", (req, res, next) => {
       image_url =  req.file.secure_url
     }
     
-    const newItem = new Item({ name, image: image_url, description, category, city})
+    const newItem = new Item({userId: _id, name, image: image_url, description, category, city})
+    
     newItem.save()
     .then((item) => {
 
