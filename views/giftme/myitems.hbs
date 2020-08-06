@@ -1,9 +1,9 @@
-<h2 class="h2myitems">My Items</h2>
+<h2 class="h2">My Items</h2>
 
 <div class="divitem">
     {{#each item.myItems}}
         <div class="itemForm">
-            <p>{{name}}</p>
+            <h4 class="nametag">{{name}}</h4>
             <img src="{{image}}"  alt=""> 
             <p class="descrip">{{description}}</p>
             <form action="/myitems/{{_id}}/delete" method="post">
@@ -15,22 +15,18 @@
 
 <!-- CREATE FORM -->
 <div class="addForm">
+
     <p>Add your items!</p>
     
     <form action="/item/create" method="post" enctype="multipart/form-data">
-    <div class="form-div">
-        {{!-- <label  for="" >Image:</label> --}}
-        <input type="file" name="image" class="custom-file-input-mi" />   
-        
-        {{!-- <label for=""> Name: </label> --}}
-        <input type="text" name="name" placeholder="Name"/>
-        
-        {{!-- <label for="">Description:</label> --}}
-        <textarea type="text" name="description" placeholder="Description"></textarea> 
-          </div> 
-        
+        <div class="form-div">
+            <input type="file" name="image" class="custom-file-input-mi" />    
+            
+            <input type="text" name="name" placeholder="Name"/>
+              
+            <textarea type="text" name="description" placeholder="Description"></textarea> 
+        </div>   
         <button class="button" type="submit">Add item</button>
-      
     </form>
 </div>
 

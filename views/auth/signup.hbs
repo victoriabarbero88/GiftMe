@@ -1,3 +1,33 @@
+{{!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<form>
+  <label>
+    <p class="label-txt">ENTER YOUR EMAIL</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR NAME</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR PASSWORD</p>
+    <input type="text" class="input">
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <button type="submit">SignUp!</button>
+</form>
+
+<script src="../src/modal.js"></script> --}}
 <h2> Sign Up </h2>
 
 {{#if errorMessage}}
@@ -9,17 +39,17 @@
 <form action="/signup" method="post">
     <div>
         <label for="name-input"> Name </label>
-        <input type="text" name="name" id="name-input" placeholder="e.g., Diana Prince">
+        <input type="text" name="name" id="name-input" placeholder="Name">
     </div>
 
     <div>
         <label for="email-input"> Email </label>
-        <input type="email" name="email" id="email-input" placeholder="e.g., diana@themyscira.agency">
+        <input type="email" name="email" id="email-input" placeholder="Email">
     </div>
 
     <div>
         <label for="password-input"> Password </label>
-        <input type="password" name="password" id="password-input" placeholder="e.g., ••••••••••••">
+        <input type="password" name="password" id="password-input" placeholder="Password">
     </div>
 
     <button> Create New Account </button>
