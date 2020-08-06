@@ -162,7 +162,7 @@ router.post("/myitems/:id/delete", (req, res, next) => {
     const { name, description, category, city } = req.body;
     const _id = req.session.currentUser._id;
     const image_url = req.file.secure_url;
-    const newItem = new Item({ name, image: image_url, description, category, city})
+    const newItem = new Item({ userId:_id, name, image: image_url, description, category, city})
     newItem.save()
     .then((item) => {
       User.update({_id:_id}, {$push: {myItems: item._id}})

@@ -25,4 +25,3 @@ window.onclick = function(event) {
   }
 }
 
-//PROFILE

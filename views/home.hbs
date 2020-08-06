@@ -2,7 +2,20 @@
 {{#if isUserLoggedIn  }}
   <p class="greet"> Hello, {{ currentUserInfo.name }} ! </p>
 {{/if}}
-<nav class="navHome">
+{{!-- <div class="w3-content w3-section" >
+  <img class="mySlides" src="../images/1.jpg" style="width:100%">
+  <img class="mySlides" src="../images/4.jpg" style="width:100%">
+  <img class="mySlides" src="../images/3.jpg" style="width:100%">
+</div> --}}
+{{!-- <div class="w3-content" style="max-width:400px">
+  <div class="slidesimg">
+    <img class="mySlides" src="../images/3.jpg" style="width:100% height:100%">
+  </div>
+  <div class="slidesimg">
+    <img class="mySlides" src="../images/4.jpg" style="width:100% height:100%">
+  </div>
+</div>
+	<nav class="navHome"> --}}
   
     {{#if isUserLoggedIn  }}
       <button ><a href="/profile"> Profile </a></button> 
@@ -12,7 +25,6 @@
     {{else}}
       <div class="homephrase">
         <a id="enter" href="/signuplogin"> Welcome, to start sharing, please click here! </a>
-        <a href="/signuplogin" alt="logoheart"><img src="../images/heart.png" height="80px"</a>
       </div>
     {{/if}}
   
@@ -20,7 +32,8 @@
 
 
 
-<script src="../src/modal.js"></script>
+
+{{!-- <script src="../src/images.js"></script> --}}
 
 
 

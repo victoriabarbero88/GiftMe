@@ -1,6 +1,6 @@
 
 <section class="signlog">
-    <p>Please Sign up and then log in! If you have already an account please Log in!</p>
+    <p>Please Sign up and then log in! <br> If you have already an account please Log in!</p>
     <h2> Sign Up </h2>
     
     <div class="signupcontainer">
@@ -14,10 +14,10 @@
             <div>
                 <input type="password" name="password" placeholder="Password">
             </div>
-            <button class="myButton"> Create New Account </button>
-            {{#if errorMessage}}
+            <button class="myButton"> Sign Up! </button>
+            {{!-- {{#if errorMessage}}
                 <p class="error-message">{{ errorMessage }} </p>
-            {{/if}}
+            {{/if}} --}}
         </form>
         {{!-- <p>Already have an account? Please, log in!</p> --}}
     </div>
@@ -31,9 +31,9 @@
                 <input type="password" name="password" placeholder="Password">
             </div>
             <button class="myButton"> Log In </button>
-        </form>
-        {{#if errorMessage}}
-            <p class="error-message">{{ errorMessage }}</p>
-        {{/if}}
+        </form> 
     </div>
+    {{#if errorMessage}}
+            <p id="error-message">{{ errorMessage }}</p>
+    {{/if}}
 </section>

@@ -43,6 +43,7 @@ User.findOne({email})
 
             res.render("auth/signuplogin", {errorMessage: "Error while creating account. Please try again"})
         });
+        
     })
     .catch((err)=> console.log(err));
 
