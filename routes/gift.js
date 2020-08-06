@@ -84,6 +84,15 @@ router.get('/profile', (req, res, next) => {
 router.post('/profile/update', parser.single("image"), (req, res, next) => {
     //console.log(req.file)
     const _id = req.session.currentUser._id;
+    if (!req.file || !req.file.secure_url){
+      User.findById(_id)
+    .then((user)=>{
+      return res.render("giftme/profile", {user, errorMessage: "Please upload an image"} )
+    })
+
+    .catch((error)=>{})
+      }else {
+   
     const {name, description} = req.body;
     const image_url = req.file.secure_url;
     User.findByIdAndUpdate(_id, {image: image_url, name, description})
@@ -92,9 +101,10 @@ router.post('/profile/update', parser.single("image"), (req, res, next) => {
     })
 
     .catch((error)=>{})
+      };
     });
     
-
+  
 
 
 router.get('/myitems', (req, res, next) => {
