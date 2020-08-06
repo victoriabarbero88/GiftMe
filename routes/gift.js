@@ -109,11 +109,16 @@ router.post('/profile/update', parser.single("image"), (req, res, next) => {
 
 router.get('/myitems', (req, res, next) => {
   const user = req.session.currentUser;
+  const error = req.query.error;
+  let errorMessage
+  if (error){
+    errorMessage = "Please fill the information required"
+  }
   User.findById(user._id)
   .populate('myItems')
-  .then((item) => {
-    console.log(item);
-    res.render('giftme/myitems', {item})
+  .then((user) => {
+    console.log(user);
+    res.render('giftme/myitems', {user, errorMessage})
     
   })  
   .catch((error) => {
@@ -139,30 +144,29 @@ router.post("/myitems/:id/delete", (req, res, next) => {
 
   router.post('/item/create', parser.single("image"), (req, res, next) => {
     const _id = req.session.currentUser._id;
-    if (!req.file || !req.file.secure_url){
-      Item.findById(_id)
-    .then((item)=>{
-      return res.render("giftme/myitems", {item, errorMessage: "Please upload an image"} )
-    })
-  
-    .catch((error)=>{})
-      }else {
-   
-
     const { name, description, category, city } = req.body;
-    const image_url = req.file.secure_url;
+    let image_url 
+    if (req.file) {
+      image_url =  req.file.secure_url
+    }
+    
     const newItem = new Item({ name, image: image_url, description, category, city})
     newItem.save()
     .then((item) => {
-      Item.update({_id:_id}, {$push: {myItems: item._id}})
-      .then(()=>{
+
+      User.update({_id:_id}, {$push: {myItems: item._id}}, {new: true})
+      .then((user)=>{
+        console.log(user)
+       
         res.redirect('/myitems');
       })
     })
+
     .catch((error) => {
       console.log(error);
+      res.redirect("/myitems?error=empty")
     })
-  };
+  
   });
 
 

@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
-  name:  {type: String ,default: ""},
+  name:  {type: String ,default: "", required: true},
   userId: {type: mongoose.Types.ObjectId, ref:"User"},
-  description: {type: String ,default: ""},
-  image: { type: String ,default: "https://erc.uonbi.ac.ke/sites/erc.uonbi.ac.ke/files/styles/large/public/2016-05/feature-1.jpg?itok=AKwWLRcS"},
+  description: {type: String ,default: "", required: true},
+  image: { type: String , required: true},
   category: {type: String, enum:["books", "clothes", "devices"]},
   city: {type: String, enum:["Barcelona", "Madrid"]},
   requests: [{

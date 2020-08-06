@@ -1,7 +1,8 @@
+
 <h2 class="h2">My Items</h2>
 
 <div class="divitem">
-    {{#each item.myItems}}
+    {{#each user.myItems}}
         <div class="itemForm">
             <h4 class="nametag">{{name}}</h4>
             <img src="{{image}}"  alt=""> 
@@ -28,14 +29,17 @@
         </div>   
         <button class="button" type="submit">Add item</button>
 
+
+    </form>
+
+
           {{#if errorMessage}}
     <p class="error-message">
         {{ errorMessage }}
     </p>
     {{/if}}
-
-    </form>
 </div>
+
 
 
 <!-- UPDATE FORM -->
