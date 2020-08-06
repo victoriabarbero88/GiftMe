@@ -112,7 +112,7 @@ router.get('/myitems', (req, res, next) => {
   const error = req.query.error;
   let errorMessage
   if (error){
-    errorMessage = "Please fill the information required"
+    errorMessage = "Please fil out all fields"
   }
   User.findById(user._id)
   .populate('myItems')
