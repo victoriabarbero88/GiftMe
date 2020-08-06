@@ -19,7 +19,7 @@ router.get('/signup', (req,res,next)=>{
 router.post('/signup', (req,res,next) =>{
     const {name, email, password} = req.body;
         if (email === "" || password === "" || name === ""){
-    res.render ("auth/signup", {errorMessage: "Indicate a name, email and a password to sign up"});
+    res.render ("auth/signuplogin", {errorMessage: "Indicate a name, email and a password to sign up"});
     return;
 
     }
@@ -27,7 +27,7 @@ router.post('/signup', (req,res,next) =>{
 User.findOne({email})
     .then((foundUser)=>{
         if (foundUser){
-            res.render("auth/signup", { errorMessage: "There´s is already an account with this email"});
+            res.render("auth/signuplogin", { errorMessage: "There´s is already an account with this email"});
             return;
         }
 
@@ -37,11 +37,11 @@ User.findOne({email})
 
     User.create({name, email, password: hashedPassword})
         .then(()=>{
-            res.redirect("/login");
+            res.redirect("/signuplogin");
         })
         .catch((err)=>{
 
-            res.render("auth/signup", {errorMessage: "Error while creating account. Please try again"})
+            res.render("auth/signuplogin", {errorMessage: "Error while creating account. Please try again"})
         });
     })
     .catch((err)=> console.log(err));
@@ -51,23 +51,23 @@ User.findOne({email})
 // LOGIN
 
 router.get("/login", (req,res,next) => {
-    res.render("auth/login");
+    res.render("auth/signuplogin");
 });
 
 router.post("/login", (req,res,next)=>{
     const {email, password} = req.body;
     if(email === "" || password === ""){
-        res.render("auth/login", {errorMessage:"Please enter email and password to login"});
+        res.render("auth/signuplogin", {errorMessage:"Please enter email and password to login"});
         return;
     }
     User.findOne({email: email})
     .then((user)=> {
         if(user === null){
-            res.render("auth/login", {errorMessage: "The email doesn´t exist"});
+            res.render("auth/signuplogin", {errorMessage: "The email doesn´t exist"});
             return;
         }
         if (!bcrypt.compareSync(password, user.password)){
-            res.render('auth/login', {
+            res.render('auth/signuplogin', {
                 errorMessage: 'Invalid password.'
               });
               return;
@@ -77,7 +77,7 @@ router.post("/login", (req,res,next)=>{
             res.redirect('/');
     })
     .catch(()=>{
-        res.render("auth/login", {errorMessage: "Error while login. Try again later"})
+        res.render("auth/signuplogin", {errorMessage: "Error while login. Try again later"})
     })
 
 });
