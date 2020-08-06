@@ -99,8 +99,8 @@ footer img {
 }
 .greet {
   font-size: 1.75rem;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -108,19 +108,21 @@ footer img {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  
 }
 .navHome button {
   margin-top: 20px;
-  padding: 10px 30px;
-  border-radius: 10%;
-  background-image: url("../images/backgrounds/leather_1.png");
+  padding: 8px 40px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.596);
   filter: drop-shadow(0 0 0.50rem rgb(156, 151, 152));
+  
 }
 .navHome a {
   text-decoration: none;
-  color: black;
+  /* color: black; */
   font-size: 1rem; 
+  color:white;
 }
 .homephrase img {
   display: flex;
@@ -297,21 +299,33 @@ footer img {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.507);
   margin-bottom: 150px;
+  
 }
 .marketitems img {
   height: 200px; 
   filter: drop-shadow(0 0 0.75rem rgb(156, 151, 152));
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 40px;
 }
 .marketitems h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-top: 40px;
   margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 
 /*PROFILE VIEW*/
 .profile button {
   margin-bottom: 150px;
+  margin-top: 20px;
+}
+
+.profile label {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .profile img {
   display: block;
@@ -320,6 +334,7 @@ footer img {
   width: 80%;
   filter: drop-shadow(0 0 0.75rem rgb(156, 151, 152));
   margin-top: 8%;
+  padding: 20px 0;
 }
  .container {
    display: flex;
@@ -348,7 +363,7 @@ footer img {
   background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
   border: 1px solid #999;
   border-radius: 3px;
-  padding: 5px 100px;
+  padding: 5px 80px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -394,7 +409,11 @@ footer img {
   width: 80%;
   filter: drop-shadow(0 0 0.75rem rgb(156, 151, 152));
 }
-
+.otherudata {
+  margin-bottom: 150px;
+  background-color: rgba(255, 255, 255, 0.507);
+  padding-top: 20px;
+}
 
 /*ITEM DETAILS*/
 
@@ -405,7 +424,6 @@ footer img {
   width: 50%;
   height: 50%;
   filter: drop-shadow(0 0 0.75rem rgb(156, 151, 152));
-  
 }
 
 .item-style{
@@ -414,10 +432,15 @@ footer img {
   align-items: center;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.507);
+  margin-bottom: 150px;
 }
  
+.item-style p{
+  margin: 20px;
+  padding-bottom: 20px;
+}
 .links{
-margin-top: 20px;
+padding: 20px 0;
 font-size: 15px; 
 }
 
@@ -430,6 +453,7 @@ font-size: 15px;
   margin-right: auto; 
   width: 70%;
   height: 70%; 
+  margin-top: 20px;
 }
 
 .request img {
@@ -452,9 +476,12 @@ font-size: 15px;
   margin: 10px;
 }
 
-.form-style{
+.form-style1{
   /* text-align: center; */
+  display: flex;
   align-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 .modal img {
   height: 100px;
