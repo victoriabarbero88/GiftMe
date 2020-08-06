@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const itemSchema = new Schema({
   name:  {type: String ,default: ""},
   userId: {type: mongoose.Types.ObjectId, ref:"User"},
-  description: {type: String ,default: "https://s3-eu-central-1.amazonaws.com/buddyloans-news/app/uploads/2015/12/shutterstock_70527019.jpg"},
-  image: { type: String ,default: ""},
+  description: {type: String ,default: ""},
+  image: { type: String ,default: "https://erc.uonbi.ac.ke/sites/erc.uonbi.ac.ke/files/styles/large/public/2016-05/feature-1.jpg?itok=AKwWLRcS"},
   category: {type: String, enum:["books", "clothes", "devices"]},
   city: {type: String, enum:["Barcelona", "Madrid"]},
   requests: [{

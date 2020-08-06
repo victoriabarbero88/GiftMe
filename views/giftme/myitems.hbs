@@ -27,6 +27,13 @@
             <textarea type="text" name="description" placeholder="Description"></textarea> 
         </div>   
         <button class="button" type="submit">Add item</button>
+
+          {{#if errorMessage}}
+    <p class="error-message">
+        {{ errorMessage }}
+    </p>
+    {{/if}}
+
     </form>
 </div>
 

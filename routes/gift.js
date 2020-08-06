@@ -137,45 +137,24 @@ router.post("/myitems/:id/delete", (req, res, next) => {
 });
 
 
-
-// router.get('/myitmes', (req, res, next) => {
-//   const _id = req.session.currentUser._id;
-
-//   User.findOne({_id})
-//   .then((user)=>{
-//     res.render('giftme/myitems', {user}); 
-//   })
-//   .catch((error)=>{
-//   })
-// });
+  router.post('/item/create', parser.single("image"), (req, res, next) => {
+    const _id = req.session.currentUser._id;
+    if (!req.file || !req.file.secure_url){
+      Item.findById(_id)
+    .then((item)=>{
+      return res.render("giftme/myitems", {item, errorMessage: "Please upload an image"} )
+    })
+  
+    .catch((error)=>{})
+      }else {
    
 
-  // router.post('/item/create', (req, res, next) => {
-  //   const { name, image, description, category, city} = req.body;
-  //   const user= req.session.currentUser._id;
-  //   const newItem = new Item({ name,image, description, category, city})
-  //   newItem.save()
-  //   .then((item) => {
-  //     console.log(item)
-  //     console.log("holi", user)
-  //     User.update({_id:user}, {$push: {myItems: item._id}})
-  //     .then(()=>{
-  //       res.redirect('/myitems');
-  //     })
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   })
-  // });
-
-  router.post('/item/create', parser.single("image"), (req, res, next) => {
     const { name, description, category, city } = req.body;
-    const _id = req.session.currentUser._id;
     const image_url = req.file.secure_url;
     const newItem = new Item({ name, image: image_url, description, category, city})
     newItem.save()
     .then((item) => {
-      User.update({_id:_id}, {$push: {myItems: item._id}})
+      Item.update({_id:_id}, {$push: {myItems: item._id}})
       .then(()=>{
         res.redirect('/myitems');
       })
@@ -183,21 +162,40 @@ router.post("/myitems/:id/delete", (req, res, next) => {
     .catch((error) => {
       console.log(error);
     })
+  };
   });
+
+
+
+  /* RUTA PARA UPDATE ITEMS*/
   
-  router.post('/item/update', parser.single("image"), (req, res, next) => {
-    const _id = req.session.currentUser._id;
-    const {name, description} = req.body;
-    const image_url = req.file.secure_url;
-    Item.findByIdAndUpdate(_id, {name, image: image_url, description})
-    .then(()=>{
-      res.redirect("/myitems")
-    })
+  // router.post('/item/update', parser.single("image"), (req, res, next) => {
+  //   const _id = req.session.currentUser._id;
 
-    .catch((error)=>{})
-    });
+  //   if (!req.file || !req.file.secure_url){
+  //     Item.findById(_id)
+  //   .then((item)=>{
+  //     return res.render("giftme/myitems", {item, errorMessage: "Please upload an image"} )
+  //   })
+  
+  //   .catch((error)=>{})
+  //     }else {
+
+  //   const {name, description} = req.body;
+  //   const image_url = req.file.secure_url;
+  //   Item.findByIdAndUpdate(_id, {name, image: image_url, description})
+  //   .then(()=>{
+  //     res.redirect("/myitems")
+  //   })
+
+  //   .catch((error)=>{})
+
+  //     };
+  //   });
 
 
+
+  
 
 
 
