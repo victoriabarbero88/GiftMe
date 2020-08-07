@@ -4,7 +4,7 @@
 /* GENERAL */
 
 html {
-  background-color: #ffffff;
+  
   background-image: url("../images/backgrounds/45degreee_fabric.png");
   height: 100%;
 }
@@ -32,7 +32,8 @@ body {
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+  text-shadow:0px 1px 0px #b23e35;
+  margin-top: 10px;
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #e08c86 5%, #fc8d83 100%);
@@ -49,6 +50,7 @@ body {
   height: 130px;
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 
 /* LAYOUT NAVBAR */
@@ -112,7 +114,7 @@ footer img {
 }
 .navHome button {
   margin-top: 20px;
-  padding: 8px 40px;
+  padding: 8px 10px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.596);
   filter: drop-shadow(0 0 0.50rem rgb(156, 151, 152));
@@ -120,24 +122,49 @@ footer img {
 }
 .navHome a {
   text-decoration: none;
-  /* color: black; */
   font-size: 1rem; 
   color:white;
 }
+.headerImage {
+  background-image: url("../images/carousel/foto-home.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 0;
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+}
+.headerImage button {
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  padding-top: 10px;
+ 
+}
 .homephrase img {
   display: flex;
-  justify-content: center;
-  margin-top: 10%;
+  /* margin-top: 10%; */
+  height: 360px;
+  
 }
 .homephrase {
-  margin: 30% 10%; 
+  margin-top: 8%;
+  object-fit: cover;
+  padding: 10px 10px;
+  background-color: rgba(255, 255, 255, 0.507);
+  text-align: center;
 }
 
+.homephrase p {
+  margin-top: 20px;
+}
 #enter { 
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-align: justify;
   color: black;
   text-decoration: none;
+  padding-top: 10px;
 }
 
 /*SIGNLOGIN*/
@@ -190,7 +217,17 @@ footer img {
   margin-bottom: 20px;
   margin-top: 10px;
 }
+.itemForm h4 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
+.form-div textarea {
+  margin-top: 10px;
+}
 .nametag {
   font-size: 2rem;
   text-align: center;
@@ -334,7 +371,7 @@ footer img {
   width: 80%;
   filter: drop-shadow(0 0 0.75rem rgb(156, 151, 152));
   margin-top: 8%;
-  padding: 20px 0;
+  padding: 8px 0;
 }
  .container {
    display: flex;
@@ -342,45 +379,7 @@ footer img {
    margin-bottom: 5%;
  }
 
- #inputfile {
-  display: block;
-  align-items: center;
-  margin-left: 30px;
-  margin-bottom: 8%; 
-}
-
-.custom-file-input {
-  color: transparent;
-  
-}
-.custom-file-input::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.custom-file-input::before {
-  content: 'Select a photo';
-  color: black;
-  display: inline-block;
-  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
-  border: 1px solid #999;
-  border-radius: 3px;
-  padding: 5px 80px;
-  outline: none;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  cursor: pointer;
-  text-shadow: 1px 1px #fff;
-  font-weight: 700;
-  font-size: 10pt;
-}
-.custom-file-input:hover::before {
-  border-color: black;
-}
-.custom-file-input:active {
-  outline: 0;
-}
-.custom-file-input:active::before {
-  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
-}
+ 
 
 
 /*OTHER USER*/
@@ -402,7 +401,7 @@ footer img {
 }
 
 .img-user-other {
-  /* height: 200px; */
+  
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -413,6 +412,7 @@ footer img {
   margin-bottom: 150px;
   background-color: rgba(255, 255, 255, 0.507);
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /*ITEM DETAILS*/
@@ -436,12 +436,16 @@ footer img {
 }
  
 .item-style p{
-  margin: 20px;
+  margin: 10px;
   padding-bottom: 20px;
 }
 .links{
 padding: 20px 0;
 font-size: 15px; 
+}
+.links a {
+  color: white;
+  text-decoration: none;
 }
 
 
@@ -455,7 +459,10 @@ font-size: 15px;
   height: 70%; 
   margin-top: 20px;
 }
-
+.form-style button {
+  display: flex;
+  justify-content: center;
+}
 .request img {
   width: 50%;
   height:50%;
@@ -466,20 +473,22 @@ font-size: 15px;
 }
 .request p {
   font-size: 1.35rem;
-  margin-top: 40px;
-  margin-bottom: 20px; 
+  margin-top: 10px;
+  margin-bottom: 10px; 
   text-align: center;
 }
-
+.radio label {
+  margin-bottom: 5px;
+}
 .radio {
-  align-content: flex-start;
-  margin: 10px;
+  align-content: center;
+  margin: 8px;
 }
 
 .form-style1{
-  /* text-align: center; */
+  text-align: center;
   display: flex;
-  align-content: flex-start;
+  align-content: center;
   flex-direction: column;
   justify-content: center;
 }

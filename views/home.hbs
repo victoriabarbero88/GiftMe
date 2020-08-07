@@ -2,29 +2,33 @@
 {{#if isUserLoggedIn  }}
   <p class="greet"> Hello, {{ currentUserInfo.name }} ! </p>
 {{/if}}
-{{!-- <div class="w3-content w3-section" >
-  <img class="mySlides" src="../images/1.jpg" style="width:100%">
-  <img class="mySlides" src="../images/4.jpg" style="width:100%">
-  <img class="mySlides" src="../images/3.jpg" style="width:100%">
-</div> --}}
-{{!-- <div class="w3-content" style="max-width:400px">
+ {{!-- 
+<div class="w3-content" style="max-width:400px">
   <div class="slidesimg">
     <img class="mySlides" src="../images/3.jpg" style="width:100% height:100%">
   </div>
   <div class="slidesimg">
     <img class="mySlides" src="../images/4.jpg" style="width:100% height:100%">
   </div>
-</div>--}}
+</div> --}}
 	<nav class="navHome"> 
   
     {{#if isUserLoggedIn  }}
+    <div class="headerImage">
       <button ><a href="/profile"> Profile </a></button> 
       <button><a href="/myitems"> My Items</a> </button>   
       <button><a href="/marketplace"> Marketplace</a> </button>
       <button><a href="/logout"> Log Out </a> </button>
+    </div>
     {{else}}
       <div class="homephrase">
-        <a id="enter" href="/signuplogin"> Welcome, to start sharing, please click here! </a>
+        <a id="enter" href="/signuplogin"> Welcome to GiftMe!
+        <div class="w3-content w3-section" >
+          <img class="mySlides" src="../images/carousel/foto-home.jpeg" style="width:100%">
+          <img class="mySlides" src="../images/carousel/foto-home2.jpeg" style="width:100%">
+          <img class="mySlides" src="../images/carousel/foto-home3.jpeg" style="width:100%">
+        </div></a>
+        <p>Give away all the items you don't need anymore!</p>
       </div>
     {{/if}}
   
@@ -33,7 +37,7 @@
 
 
 
-{{!-- <script src="../src/images.js"></script> --}}
+<script src="../src/images.js"></script>
 
 
 
