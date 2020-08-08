@@ -1,3 +1,7 @@
+<img src="/Users/vicky/Downloads/Dibujo sin título.jpg" style="zoom:150%;" />
+
+
+
 # GiftMe! 🎁
 
 ## Description
@@ -136,12 +140,12 @@ Item model
 
 The url to your repository and to your deployed project
 
-[Repository Link](http://github.com/)
+[Repository Link](https://github.com/victoriabarbero88/GiftMe)
 
-[Deploy Link](http://heroku.com/)
+[Deploy Link](https://giftme-app.herokuapp.com/login)
 
 ### Slides
 
 The url to your presentation slides
 
-[Slides Link](http://slides.com/)
+[Slides Link](https://docs.google.com/presentation/d/13jzFjhSwcnoVbMpXvSBurspYUTdlWSuYFoZNzPDpZk4/edit?usp=sharing)
