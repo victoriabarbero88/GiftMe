@@ -1,4 +1,4 @@
-<img src="/Users/vicky/Downloads/Dibujo sin título.jpg" style="zoom:150%;" />
+<img src="../images/readme" style="zoom:150%;" />
 
 
 
